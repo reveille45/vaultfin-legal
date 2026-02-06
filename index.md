@@ -1,6 +1,6 @@
 # Privacy Policy for VaultFin
 
-**Last Updated:** January 30, 2026
+**Last Updated:** February 5, 2026
 
 ## Introduction
 
@@ -57,7 +57,6 @@ The App requests the following Android permissions:
 
 - **Internet:** Used exclusively for direct communication with the SimpleFIN API when you initiate a bank sync. No other network communication occurs.
 - **Biometrics:** Used locally via Android BiometricPrompt to unlock the application. Biometric data never leaves the device's Secure Enclave/Keystore and is never accessible to us.
-- **Camera (optional):** Used only if you choose to scan a SimpleFIN QR code for setup. Images are processed locally and immediately discarded.
 
 ## Third-Party Services
 
@@ -133,7 +132,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 
 ## California Privacy Rights
 
-If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA). However, since we do not collect personal information on our servers, these rights are already inherently satisfied—there is no personal data for us to disclose, sell, or delete.
+If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA). However, since we do not collect personal information on our servers, these rights are already inherently satisfied. There is no personal data for us to disclose, sell, or delete.
 
 ## International Users
 
@@ -151,38 +150,25 @@ If you have questions about this Privacy Policy, please contact us at:
 
 ## Google Play Data Safety Form Guide
 
-When completing the Google Play Console Data Safety section, use these answers:
+This section outlines VaultFin's data handling practices in relation to Google Play's Data Safety definitions.
 
-### Data Collection
+**Core Architecture:** VaultFin utilizes a "local-first" architecture. Data retrieved from the SimpleFIN API is downloaded directly to the user's device and stored in an encrypted local database. This data is not transmitted to VaultFin or any third-party servers.
 
-| Data Type | Collected? | Shared? | Details |
-|-----------|------------|---------|---------|
-| Financial info (Bank account) | **Yes** | No | Collected from SimpleFIN, stored locally only |
-| Financial info (Purchase history) | **Yes** | No | Transaction data stored locally only |
-| Personal info | No | No | — |
-| Location | No | No | — |
-| App activity | No | No | — |
-| Device info | No | No | — |
+### Data Collection Declaration
 
-### For "Financial Info" Responses:
+Based on Google Play's "On-device access/processing" classification, data that is processed locally on the user's device and not sent off-device is not classified as "collected."
 
-- **Is this data collected, shared, or both?** Collected only
-- **Is this data processed ephemerally?** No (stored in local database)
-- **Is this data required for your app, or can users choose whether it's collected?** Required for core functionality
-- **Why is this data collected?** App functionality (tracking personal finances)
+| Data Type | Collected? | Shared? | Explanation |
+|-----------|------------|---------|-------------|
+| Financial info | **No** | No | Data is downloaded to the device for local processing and storage only. |
+| Personal info | No | No | Not accessed. |
+| Device info | No | No | Not accessed. |
 
 ### Security Practices
 
-- **Data encrypted in transit:** Yes (HTTPS to SimpleFIN)
-- **Data encrypted at rest:** Yes (SQLCipher AES-256)
-- **Users can request data deletion:** Yes (uninstall removes all data)
-- **Committed to Play Families Policy:** Not applicable (not a family app)
-
-### Important Notes
-
-- Even though data stays on the device, Google considers fetching data from SimpleFIN as "collection" by the app
-- Specify in the detailed description that data is "stored locally on the user's device only"
-- The app does NOT share data with any third parties for advertising, marketing, or analytics
+- **Encryption:** All financial data is encrypted at rest using SQLCipher (AES-256) and in transit via HTTPS.
+- **Deletion:** Uninstalling the application permanently deletes all local data.
+- **Sharing:** No user data is shared with third parties.
 
 ---
 
